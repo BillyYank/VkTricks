@@ -9,6 +9,8 @@ import vk_api
     of paths intersection from the first men and the second
 
     In the tree structure we store paths from the first or the second men
+    
+    Cause Vk limits on requests it can take some time (up to 1-2 minuets)
 '''
 
 
@@ -47,7 +49,6 @@ def vk_find_smallest_path(first_id, second_id, vk):
         common_friends = list(first_tree.grays.intersection(second_tree.grays))
         if len(common_friends) != 0:
             friend = common_friends[0]
-            print(friend)
             return first_tree.path_up(friend)[-1:0:-1] + second_tree.path_up(friend)
         else:
             trees = (first_tree, second_tree)
