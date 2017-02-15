@@ -72,7 +72,7 @@ def vk_find_smallest_path(first_id, second_id, vk):
 
 
 def main():
-    login, password = "your_login", "your_password"
+    login, password = "your login", "your password"
     vk = vk_api.VkApi(login, password)
 
     try:
@@ -92,7 +92,10 @@ def main():
 
     chain = vk.method('users.get', {'user_ids': user_ids})
     for user in chain:
-        print(user)
+        print(user['first_name'])
+        print(user['last_name'])
+        print(user['id'])
+        print("-------------------")
 
 if __name__ == '__main__':
     main()
