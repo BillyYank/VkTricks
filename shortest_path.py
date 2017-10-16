@@ -72,7 +72,7 @@ def vk_find_smallest_path(first_id, second_id, vk):
 
 
 def main():
-    login, password = "+79637594844", "24osomoz"
+    login, password = "login", "password"
     vk = vk_api.VkApi(login, password)
 
     try:
