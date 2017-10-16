@@ -72,12 +72,12 @@ def vk_find_smallest_path(first_id, second_id, vk):
 
 
 def main():
-    login, password = "your login", "your password"
+    login, password = "+79637594844", "24osomoz"
     vk = vk_api.VkApi(login, password)
 
     try:
-        vk.authorization()
-    except vk_api.AuthorizationError as error_msg:
+        vk.auth()
+    except vk_api.AuthError as error_msg:
         print(error_msg)
         return
 
